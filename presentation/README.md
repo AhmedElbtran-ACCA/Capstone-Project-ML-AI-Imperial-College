@@ -15,5 +15,6 @@ This folder is reserved for the final capstone presentation or a link to hosted 
 3. Data schema and query-response history.
 4. Strategy evolution from exploration to controlled refinement.
 5. Gaussian Process surrogate modelling and acquisition functions.
-6. Best-so-far results once the final query history is available.
-7. Limitations, assumptions and future improvements.
+6. Documentation visuals from `figures/bbo_workflow.png` and `figures/bbo_strategy_evolution.png`.
+7. Best-so-far results once the final query history is available.
+8. Limitations, assumptions and future improvements.

@@ -1,5 +1,6 @@
-jupyter
+ipykernel
 matplotlib
+nbconvert
 notebook
 numpy
 pandas

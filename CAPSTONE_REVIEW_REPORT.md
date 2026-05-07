@@ -66,7 +66,14 @@ No important files were deleted. Generic placeholder files were rewritten in pla
 - `git diff --check` passed with only Git line-ending warnings on Windows.
 - A scan for the original template placeholders and classifier references found no remaining project-template terms.
 
-The active Python environment does not currently have `pandas` installed, and `jupyter` is not available on PATH. Because of that, I could not execute the notebook or run the full utility smoke test in the current environment. The required packages are documented in `requirements.txt`.
+Follow-up execution pass:
+
+- A local `.venv` was created and the execution dependencies were installed.
+- `pip install -r requirements.txt` completed successfully in the local `.venv`.
+- `src/bbo_utils.py` passed a smoke test using a minimal in-memory example.
+- `notebooks/BBO_Capstone_Method_and_Results.ipynb` executed successfully with the available empty schema template.
+- `scripts/generate_documentation_figures.py` generated the committed documentation figures in `figures/`.
+- Data-dependent result figures, score tables and model artifacts remain blocked because `data/raw/bbo_query_history.csv` is not present.
 
 ## Recommendations Not Implemented Automatically
 
