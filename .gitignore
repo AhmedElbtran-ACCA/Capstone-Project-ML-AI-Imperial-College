@@ -3,8 +3,23 @@ venv/
 env/
 __pycache__/
 .ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Operating system files
+.DS_Store
+Thumbs.db
 
 # Keep large or restricted datasets out of GitHub.
 data/raw/
 data/processed/
 !data/README.md
+!data/sample/
+!data/sample/bbo_query_history_template.csv
+
+# Keep generated model artifacts local unless a small, intentional artifact is documented.
+models/*
+!models/README.md
+
+# Local notebooks and logs
+*.log

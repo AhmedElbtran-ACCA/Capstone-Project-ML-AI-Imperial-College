@@ -1,31 +1,40 @@
 # Data Access Notes
 
-Large datasets should not be uploaded directly to GitHub. Use this file to document where the data came from and how someone can access it.
+The capstone data is an iterative query-response log from the Black-Box Optimisation challenge. The raw data is not committed because it may be assessment-specific or restricted.
 
-## Dataset
+## Expected Dataset
 
-- Dataset name: [Dataset name]
-- Source: [Provider or organisation]
-- External link: [URL]
-- Licence or access terms: [Licence or terms]
-- File format: [CSV, Excel, JSON, database export, etc.]
-- Approximate size: [Rows, columns and file size]
+- Dataset name: BBO query-response log.
+- Source: Capstone challenge submissions and returned outputs.
+- Public link: Not publicly documented.
+- Licence or access terms: Subject to the programme and assessment rules.
+- File format: CSV.
+- Expected local path: `data/raw/bbo_query_history.csv`.
+
+## Expected Columns
+
+| Column | Description |
+| --- | --- |
+| `function_id` | Identifier for one of the eight unknown functions |
+| `round` | Query round or iteration number |
+| `query` | Hyphen-separated query vector, for example `0.123456-0.654321` |
+| `output` | Returned scalar output value |
+| `notes` | Optional reasoning or context |
+
+Use `data/sample/bbo_query_history_template.csv` as the schema template.
 
 ## Local File Layout
 
-Recommended local layout:
-
 ```text
 data/
-  raw/          # Original files, not committed if large or restricted
-  processed/    # Cleaned files, not committed if large or restricted
-  sample/       # Small shareable sample, if licence allows
+  raw/          # Local raw query history, not committed
+  processed/    # Local cleaned files, not committed
+  sample/       # Small shareable schema or permitted sample
 ```
-
-If a small sample is included, explain how it was created and confirm that it is permitted by the dataset licence.
 
 ## Reproducibility Notes
 
-- Download the dataset from: [URL]
-- Save the raw file as: `data/raw/[filename]`
-- Run the notebook: `notebooks/BBO_Capstone_Method_and_Results.ipynb`
+1. Export or assemble the query-response log as a CSV.
+2. Save it locally as `data/raw/bbo_query_history.csv`.
+3. Run `notebooks/BBO_Capstone_Method_and_Results.ipynb`.
+4. Commit only permitted summaries, figures or anonymised samples.
