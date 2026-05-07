@@ -1,0 +1,10 @@
+.venv/
+venv/
+env/
+__pycache__/
+.ipynb_checkpoints/
+
+# Keep large or restricted datasets out of GitHub.
+data/raw/
+data/processed/
+!data/README.md
